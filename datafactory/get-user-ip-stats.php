@@ -27,6 +27,9 @@ $query = "SELECT time, ip_address, platform, xml," .
 $params = array(':user'=>$_POST['user']);
 $results = getResults($database, $query, $params);
 $nrow = array();
+if (!is_array($_SESSION['ips'])) {
+	$_SESSION['ips'] = array();
+}
 $i = 0;
 while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
 	if (empty($row['ip_address'])) {
@@ -49,19 +52,24 @@ while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
 		$nrow[$i][] = "n/a";
 		$nrow[$i][] = "";
 	} else {
-		// Public, so attempt to geolocate
-		$rowUrl = "http://www.geoplugin.net/xml.gp?ip=" . $row['ip_address'];
-		$rowData = simplexml_load_file($rowUrl)
-			or die ('<div class="alert alert-warning ">Cannot access '.
-				'http://freegeoip.net</div>');
-		if (empty($rowData->geoplugin_city)) {
-			$nrow[$i][] = "n/a";
-			$nrow[$i][] = "";
-		} else {
-			$nrow[$i][] = $rowData->geoplugin_city . ", " . $rowData->geoplugin_region;
-			$nrow[$i][] = "https://maps.google.com/maps?q=" .
-				urlencode($rowData->geoplugin_city . ", " . $rowData->geoplugin_region);
+		if (!isset($_SESSION['ips'][$row['ip_address']])) {
+			// Public, so attempt to geolocate
+			$rowUrl = 'http://www.geoplugin.net/xml.gp?ip=' . $row['ip_address'];
+			$rowData = simplexml_load_file($rowUrl)
+				or die ('<div class="alert alert-warning ">Cannot access '.
+					'http://www.geoplugin.net/</div>');
+			if (empty($rowData->geoplugin_city)) {
+				$_SESSION['ips'][$row['ip_address']][] = 'n/a';
+				$_SESSION['ips'][$row['ip_address']][] = '';
+			} else {
+				$_SESSION['ips'][$row['ip_address']][] = $rowData->geoplugin_city .
+					", " . $rowData->geoplugin_region;
+				$_SESSION['ips'][$row['ip_address']][] = "https://maps.google.com/maps?q=" .
+					urlencode($rowData->geoplugin_city . ", " . $rowData->geoplugin_region);
+			}
 		}
+		$nrow[$i][] = $_SESSION['ips'][$row['ip_address']][0];
+		$nrow[$i][] = $_SESSION['ips'][$row['ip_address']][1];
 	}
 	$i++;
 }
