@@ -34,9 +34,10 @@ require_once(dirname(__FILE__) . '/includes/timeago.php');
 		<link rel="apple-touch-icon" sizes="144x144" href="images/icon_ipad@2x.png">
 	</head>
 	<body>
-
-	<?php $page = 'users'; include 'header.php' ?>
-
+		<?php
+		$page = 'users';
+		include 'header.php';
+		?>
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span12">

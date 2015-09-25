@@ -1,6 +1,6 @@
 //php-cpu-monitor was developed by Steve Stone - zyk0tik@gmail.com
 //If you find this useful then please share it about to people who you think may also find use for it.
-//This program comes with absolutely no warranty and under no license. 
+//This program comes with absolutely no warranty and under no license.
 //If you think you can contribute to the codebase then please contact me!
 
 //Enables Tooltips using JQueryUI.
@@ -18,7 +18,7 @@ $(function() {
 
 var cpuUsage = new Array, ramUsage = new Array, cpuWidth = new Array, ramWidth = new Array, cpuCall = "0.5";
 
-//Function to change how often the monitor is refreshed           
+//Function to change how often the monitor is refreshed
 function changeSeconds(){
      if ($("#radio1").attr("checked")) {
           cpuCall = "1";
@@ -83,5 +83,3 @@ $(function replay(){
           });
      });
 });
-
-

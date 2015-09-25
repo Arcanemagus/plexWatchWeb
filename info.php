@@ -533,9 +533,10 @@ function printSeasonEpisodes($xml) {
 		<link rel="apple-touch-icon" sizes="144x144" href="images/icon_ipad@2x.png">
 	</head>
 	<body>
-
-	<?php $page = 'info'; include 'header.php' ?>
-
+		<?php
+		$page = 'info';
+		include 'header.php';
+		?>
 		<div class="clear"></div>
 		<?php
 		$msg = '<div class="container-fluid">' .

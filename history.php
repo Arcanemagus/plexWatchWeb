@@ -47,9 +47,10 @@
 		<link rel="apple-touch-icon" sizes="144x144" href="images/icon_ipad@2x.png">
 	</head>
 	<body>
-
-	<?php $page = 'history'; include 'header.php' ?>
-
+		<?php
+		$page = 'history';
+		include 'header.php';
+		?>
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span12">

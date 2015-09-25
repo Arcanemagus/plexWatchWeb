@@ -55,4 +55,3 @@ echo '<div class="dashboard-recent-media-row">';
 		}
 	echo '</ul>';
 echo '</div>';
-?>

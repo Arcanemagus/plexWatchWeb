@@ -11,4 +11,3 @@ if ($statusSessions['size'] == '0') {
 } else {
 	echo "<h3>Activity <strong>".$statusSessions['size']."</strong> user(s)</h3>";
 }
-?>

@@ -99,9 +99,10 @@ function printTop10($query, $type = null) {
 		<link rel="apple-touch-icon" sizes="144x144" href="images/icon_ipad@2x.png">
 	</head>
 	<body>
-
-	<?php $page = 'charts'; include 'header.php' ?>
-
+		<?php
+		$page = 'charts';
+		include 'header.php';
+		?>
 		<div class="container-fluid">
 			<div class="row-fluid">
 				<div class="span12">

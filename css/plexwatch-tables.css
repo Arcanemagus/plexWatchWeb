@@ -35,7 +35,7 @@
 	clear: both;
 	zoom: 1; /* Feeling sorry for IE */
 	margin-left: -20px;
-	
+
 }
 
 .dataTables_processing {
@@ -61,7 +61,7 @@
 }
 
 .dataTables_filter {
-	
+
 	float: right;
 	text-align: right;
 	margin-right: 15px;
@@ -147,7 +147,7 @@ table.display {
 	font-size: 14px;
 	line-height: 30px;
 	/* Note Firefox 3.5 and before have a bug with border-collapse
-	 * ( https://bugzilla.mozilla.org/show%5Fbug.cgi?id=155955 ) 
+	 * ( https://bugzilla.mozilla.org/show%5Fbug.cgi?id=155955 )
 	 * border-spacing: 0; is one possible option. Conditional-css.com is
 	 * useful for this kind of thing
 	 *
@@ -155,7 +155,7 @@ table.display {
 	 * It subtracts one px relative to the other browsers from the first column, and
 	 * adds one to the end...
 	 *
-	 * If you want that effect I'd suggest setting a border-top/left on th/td's and 
+	 * If you want that effect I'd suggest setting a border-top/left on th/td's and
 	 * then filling in the gaps with other borders.
 	 */
 }
@@ -211,7 +211,7 @@ table.display tr:hover a {
 }
 
 table.display td:hover a {
-	color: #F9AA03; 
+	color: #F9AA03;
 }
 
 table.display thead tr:hover {
@@ -225,25 +225,25 @@ table.display thead tr:hover {
  */
 
 .sorting_asc {
-	
+
 }
 
 .sorting_desc {
-	
+
 }
 
 .sorting {
-	
+
 }
 
 .sorting_asc_disabled {
-	
+
 }
 
 .sorting_desc_disabled {
-	
+
 }
- 
+
 table.display thead th:active,
 table.display thead td:active {
 	outline: none;
@@ -411,19 +411,19 @@ table.display tr.odd.row_selected td {
  */
 /* For the standard odd/even */
 tr.odd td.sorting_1 {
-	
+
 }
 
 tr.odd td.sorting_2 {
-	
+
 }
 
 tr.odd td.sorting_3 {
-	
+
 }
 
 tr.even td.sorting_1 {
-	
+
 }
 
 tr.even td.sorting_2 {

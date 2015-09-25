@@ -59,4 +59,3 @@ while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
 
 $graph_data = array('data'=>$nrow);
 echo json_encode($graph_data, JSON_NUMERIC_CHECK);
-?>

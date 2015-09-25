@@ -67,4 +67,3 @@ while ($row = $results->fetch(PDO::FETCH_ASSOC)) {
 	echo '</div>';
 }
 echo '</ul>';
-?>

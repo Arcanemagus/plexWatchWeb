@@ -39,4 +39,3 @@ if ($img === false) {
 }
 header('Content-Type: ' . $imgType, false);
 echo $img;
-?>

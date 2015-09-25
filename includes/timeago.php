@@ -106,4 +106,3 @@ function TimeAgo($datefrom, $dateto = -1) {
 	}
 	return $res;
 }
-?>

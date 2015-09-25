@@ -195,4 +195,3 @@ foreach ($statusSessions->Video as $session) {
 foreach ($statusSessions->Track as $session) {
 	printSession($session);
 }
-?>

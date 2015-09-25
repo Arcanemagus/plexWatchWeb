@@ -57,4 +57,3 @@ echo '<ul>';
 	echo '</li>';
 
 echo '</ul>';
-?>

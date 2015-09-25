@@ -52,10 +52,9 @@ require_once(dirname(__FILE__) . '/includes/functions.php');
 		<link rel="apple-touch-icon" sizes="144x144" href="images/icon_ipad@2x.png">
 	</head>
 	<body>
-
-	<?php $page = 'users'; include 'header.php' ?>
-	
 		<?php
+		$page = 'users';
+		include 'header.php';
 		include 'serverdatapdo.php';
 
 		$user = filter_input(INPUT_GET, 'user', FILTER_SANITIZE_FULL_SPECIAL_CHARS);

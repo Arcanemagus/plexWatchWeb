@@ -40,4 +40,3 @@ while ($row = $platformResults->fetch(PDO::FETCH_ASSOC)) {
 		echo '</div>';
 	echo '</ul>';
 }
-?>

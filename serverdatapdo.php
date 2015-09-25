@@ -603,5 +603,3 @@ EOT;
     } //end of function
 
 } //end of class
-
-?>

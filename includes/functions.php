@@ -362,4 +362,3 @@ function printStreamDetails($xmlfield) {
 		echo '</ul>';
 	echo '</div>';
 }
-?>

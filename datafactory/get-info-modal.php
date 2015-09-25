@@ -23,4 +23,3 @@ $results = getResults($database, $query, $params);
 $xml = $results->fetchColumn();
 $xmlfield = simplexml_load_string($xml);
 printStreamDetails($xmlfield);
-?>

@@ -7,4 +7,3 @@ if (file_exists($config_file)) {
 	$config = new ConfigClass();
 }
 $config->save();
-?>

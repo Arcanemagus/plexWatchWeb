@@ -769,4 +769,3 @@ function isOpenable($path) {
 	}
 	return false;
 }
-?>

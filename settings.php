@@ -608,9 +608,10 @@ function printJSONSupport() {
 		<link rel="apple-touch-icon" sizes="144x144" href="images/icon_ipad@2x.png">
 	</head>
 	<body>
-
-	<?php $page = 'settings'; include 'header.php' ?>
-
+		<?php
+		$page = 'settings';
+		include 'header.php';
+		?>
 		<div class="clear"></div>
 		<div class="container">
 			<div class="row">
