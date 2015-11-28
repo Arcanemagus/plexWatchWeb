@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ruleset name="AWWIC Custom PHPMD Ruleset"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                             http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+  <description>
+      AWWIC Custom PHPMD Ruleset
+  </description>
+
+  <!-- Import the entire Clean Code rule set -->
+  <rule ref="rulesets/cleancode.xml">
+    <exclude name="ElseExpression" />
+  </rule>
+
+  <!-- Import the entire Code Size rule set -->
+  <rule ref="rulesets/codesize.xml" />
+
+  <!-- Import the entire Controversial rule set -->
+  <!-- <rule ref="rulesets/controversial.xml" /> -->
+
+  <!-- Import the entire Design rule set -->
+  <rule ref="rulesets/design.xml" />
+
+  <!-- Import the entire Naming rule set and exclude rules -->
+  <rule ref="rulesets/naming.xml" />
+
+  <!-- Import the entire Unused Code rule set -->
+  <rule ref="rulesets/unusedcode.xml" />
+</ruleset>
