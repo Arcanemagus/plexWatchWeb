@@ -31,592 +31,566 @@
  */
 
 .dataTables_wrapper {
-	position: relative;
-	clear: both;
-	zoom: 1; /* Feeling sorry for IE */
-	margin-left: -20px;
-
+  clear: both;
+  margin-left: -20px; /* Feeling sorry for IE */
+  position: relative;
+  zoom: 1;
 }
 
 .dataTables_processing {
-	width: 50%;
-	float: left;
-	margin-top: -60px;
-	margin-left: 25%;
-	margin-bottom: 12px;
-	height: 40px;
-	padding: 8px 0px 0px 20px;
-	border: none;
-	color: #ccc;
-	font-size: 16px;
-	background-color: rgba(0,0,0,.5);
-	border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 8px;
+  color: #ccc;
+  float: left;
+  font-size: 16px;
+  height: 40px;
+  margin-bottom: 12px;
+  margin-left: 25%;
+  margin-top: -60px;
+  padding: 8px 0 0 20px;
+  width: 50%;
 }
 
 .dataTables_length {
-	width: 40%;
-	float: left;
-	margin-left: 15px;
-	margin-bottom: 20px;
+  float: left;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  width: 40%;
 }
 
 .dataTables_filter {
-
-	float: right;
-	text-align: right;
-	margin-right: 15px;
-	margin-bottom: 20px;
+  float: right;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  text-align: right;
 }
 
 .dataTables_info {
-	width: 60%;
-	float: left;
-	margin-top: 12px;
-	margin-left: 15px;
-	margin-bottom: 12px;
+  float: left;
+  margin-bottom: 12px;
+  margin-left: 15px;
+  margin-top: 12px;
+  width: 60%;
 }
 
 .dataTables_paginate {
-	float: right;
-	text-align: right;
-	margin-top: 7px;
-	margin-right: 15px;
+  float: right;
+  margin-right: 15px;
+  margin-top: 7px;
+  text-align: right;
 }
 
 /* Pagination nested */
-.paginate_disabled_previous, .paginate_enabled_previous,
-.paginate_disabled_next, .paginate_enabled_next {
-	height: 19px;
-	float: left;
-	cursor: pointer;
-	*cursor: hand;
-	color: #fff !important;
+
+.paginate_disabled_previous,
+.paginate_enabled_previous,
+.paginate_disabled_next,
+.paginate_enabled_next {
+  color: #fff !important;
+  cursor: pointer;
+  float: left;
+  height: 19px;
 }
-.paginate_disabled_previous:hover, .paginate_enabled_previous:hover,
-.paginate_disabled_next:hover, .paginate_enabled_next:hover {
-	text-decoration: none !important;
+
+.paginate_disabled_previous:hover,
+.paginate_enabled_previous:hover,
+.paginate_disabled_next:hover,
+.paginate_enabled_next:hover {
+  text-decoration: none !important;
 }
-.paginate_disabled_previous:active, .paginate_enabled_previous:active,
-.paginate_disabled_next:active, .paginate_enabled_next:active {
-	outline: none;
+
+.paginate_disabled_previous:focus,
+.paginate_enabled_previous:focus,
+.paginate_disabled_next:focus,
+.paginate_enabled_next:focus {
+  outline: none;
 }
 
 .paginate_disabled_previous,
 .paginate_disabled_next {
-	color: #666 !important;
+  color: #666 !important;
 }
-.paginate_disabled_previous, .paginate_enabled_previous {
-	padding-left: 23px;
+
+.paginate_disabled_previous,
+.paginate_enabled_previous {
+  padding-left: 23px;
 }
-.paginate_disabled_next, .paginate_enabled_next {
-	padding-right: 23px;
-	margin-left: 10px;
+
+.paginate_disabled_next,
+.paginate_enabled_next {
+  margin-left: 10px;
+  padding-right: 23px;
 }
 
 .paginate_disabled_previous {
-	background: url('../images/back_disabled.png') no-repeat top left;
+  background: url("../images/back_disabled.png") no-repeat top left;
 }
 
 .paginate_enabled_previous {
-	background: url('../images/back_enabled.png') no-repeat top left;
+  background: url("../images/back_enabled.png") no-repeat top left;
 }
+
 .paginate_enabled_previous:hover {
-	background: url('../images/back_enabled_hover.png') no-repeat top left;
+  background: url("../images/back_enabled_hover.png") no-repeat top left;
 }
 
 .paginate_disabled_next {
-	background: url('../images/forward_disabled.png') no-repeat top right;
+  background: url("../images/forward_disabled.png") no-repeat top right;
 }
 
 .paginate_enabled_next {
-	background: url('../images/forward_enabled.png') no-repeat top right;
+  background: url("../images/forward_enabled.png") no-repeat top right;
 }
+
 .paginate_enabled_next:hover {
-	background: url('../images/forward_enabled_hover.png') no-repeat top right;
+  background: url("../images/forward_enabled_hover.png") no-repeat top right;
 }
-
-
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * DataTables display
  */
+
 table.display {
-	margin: 0 auto;
-	clear: both;
-	width: 100%;
-	font-size: 14px;
-	line-height: 30px;
-	/* Note Firefox 3.5 and before have a bug with border-collapse
-	 * ( https://bugzilla.mozilla.org/show%5Fbug.cgi?id=155955 )
-	 * border-spacing: 0; is one possible option. Conditional-css.com is
-	 * useful for this kind of thing
-	 *
-	 * Further note IE 6/7 has problems when calculating widths with border width.
-	 * It subtracts one px relative to the other browsers from the first column, and
-	 * adds one to the end...
-	 *
-	 * If you want that effect I'd suggest setting a border-top/left on th/td's and
-	 * then filling in the gaps with other borders.
-	 */
+  clear: both;
+  font-size: 14px;
+  line-height: 30px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 table.display thead th {
-white-space:nowrap;
-padding: 0px 0px 0px 19px;
-border-top: 1px solid #2d2d2d;
-border-bottom: 1px solid #0e0e0e;
-cursor: pointer;
-color: #999;
-background-color: #212121;
-font-size: 11px;
+  background-color: #212121;
+  border-bottom: 1px solid #0e0e0e;
+  border-top: 1px solid #2d2d2d;
+  color: #999;
+  cursor: pointer;
+  font-size: 11px;
+  padding: 0 0 0 19px;
+  white-space: nowrap;
 }
 
-
 table.display thead th i {
-margin-top: -1px;
+  margin-top: -1px;
 }
 
 table.display tfoot th {
-	padding: 3px 18px 3px 10px;
-	border-top: 1px solid black;
-	font-weight: bold;
+  border-top: 1px solid black;
+  font-weight: bold;
+  padding: 3px 18px 3px 10px;
 }
 
 table.display tr.heading2 td {
-	border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
 }
 
 table.display td {
-	padding: 5px 0 5px 20px;
-	white-space:nowrap;
+  padding: 5px 0 5px 20px;
+  white-space: nowrap;
 }
 
 table.display td.title {
-	padding: 5px;
-	white-space: normal;
-	min-width: 400px;
+  min-width: 400px;
+  padding: 5px;
+  white-space: normal;
 }
 
 table.display td.center {
-	text-align: center;
+  text-align: center;
 }
 
 table.display tr:hover {
-	background-color: rgba(255,255,255,0.075);
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.075);
 }
 
 table.display tr:hover a {
-	text-decoration:none;
-
+  text-decoration: none;
 }
 
 table.display td:hover a {
-	color: #F9AA03;
+  color: #f9aa03;
 }
 
 table.display thead tr:hover {
-	background-color: #212121;
+  background-color: #212121;
 }
-
-
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * DataTables sorting
  */
 
-.sorting_asc {
+.sorting_asc {}
 
+.sorting_desc {}
+
+.sorting {}
+
+.sorting_asc_disabled {}
+
+.sorting_desc_disabled {}
+
+table.display thead th:focus,
+table.display thead td:focus {
+  outline: none;
 }
-
-.sorting_desc {
-
-}
-
-.sorting {
-
-}
-
-.sorting_asc_disabled {
-
-}
-
-.sorting_desc_disabled {
-
-}
-
-table.display thead th:active,
-table.display thead td:active {
-	outline: none;
-}
-
-
-
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * DataTables row classes
  */
+
 table.display tr.odd.gradeA {
-	background-color: #ddffdd;
+  background-color: #dfd;
 }
 
 table.display tr.even.gradeA {
-	background-color: #eeffee;
+  background-color: #efe;
 }
 
 table.display tr.odd.gradeC {
-	background-color: #ddddff;
+  background-color: #ddf;
 }
 
 table.display tr.even.gradeC {
-	background-color: #eeeeff;
+  background-color: #eef;
 }
 
 table.display tr.odd.gradeX {
-	background-color: #ffdddd;
+  background-color: #fdd;
 }
 
 table.display tr.even.gradeX {
-	background-color: #ffeeee;
+  background-color: #fee;
 }
 
 table.display tr.odd.gradeU {
-	background-color: #ddd;
+  background-color: #ddd;
 }
 
 table.display tr.even.gradeU {
-	background-color: #eee;
+  background-color: #eee;
 }
 
-
 tr.odd {
-	border-top: 0px solid #343434;
-	border-bottom: 0px solid #343434;
-	background-color: rgba(255,255,255,0.010);
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.01);
+  border-bottom: 0 solid #343434;
+  border-top: 0 solid #343434;
 }
 
 tr.even {
-	border-top: 0px solid #343434;
-	border-bottom: 0px solid #343434;
-	background-color: rgba(255,255,255,0.035);
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.035);
+  border-bottom: 0 solid #343434;
+  border-top: 0 solid #343434;
 }
-
-
-
-
 
 /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
  * Misc
  */
+
 .dataTables_scroll {
-	clear: both;
+  clear: both;
 }
 
 .dataTables_scrollBody {
-	*margin-top: -1px;
-	-webkit-overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
 }
 
-.top, .bottom {
-
-}
+.top,
+.bottom {}
 
 .top .dataTables_info {
-	float: none;
+  float: none;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
 
 .dataTables_empty {
-	text-align: center;
+  text-align: center;
 }
 
 tfoot input {
-	margin: 0.5em 0;
-	width: 100%;
-	color: #444;
+  color: #444;
+  margin: 0.5em 0;
+  width: 100%;
 }
 
 tfoot input.search_init {
-	color: #999;
+  color: #999;
 }
 
 td.group {
-	background-color: #d1cfd0;
-	border-bottom: 2px solid #A19B9E;
-	border-top: 2px solid #A19B9E;
+  background-color: #d1cfd0;
+  border-bottom: 2px solid #a19b9e;
+  border-top: 2px solid #a19b9e;
 }
 
 td.details {
-	background-color: #d1cfd0;
-	border: 2px solid #A19B9E;
+  background-color: #d1cfd0;
+  border: 2px solid #a19b9e;
 }
 
-
 .example_alt_pagination div.dataTables_info {
-	width: 40%;
+  width: 40%;
 }
 
 .paging_full_numbers {
-	width: 400px;
-	height: 22px;
-	line-height: 22px;
+  height: 22px;
+  line-height: 22px;
+  width: 400px;
 }
 
-.paging_full_numbers a:active {
-	outline: none
+.paging_full_numbers a:focus {
+  outline: none;
 }
 
 .paging_full_numbers a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .paging_full_numbers a.paginate_button,
- 	.paging_full_numbers a.paginate_active {
-	border: 1px solid #aaa;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	padding: 2px 5px;
-	margin: 0 3px;
-	cursor: pointer;
-	*cursor: hand;
-	color: #333 !important;
+.paging_full_numbers a.paginate_active {
+  border: 1px solid #aaa;
+  color: #333 !important;
+  cursor: pointer;
+  margin: 0 3px;
+  padding: 2px 5px;
 }
 
 .paging_full_numbers a.paginate_button {
-	background-color: #ddd;
+  background-color: #ddd;
 }
 
 .paging_full_numbers a.paginate_button:hover {
-	background-color: #ccc;
-	text-decoration: none !important;
+  background-color: #ccc;
+  text-decoration: none !important;
 }
 
 .paging_full_numbers a.paginate_active {
-	background-color: #99B3FF;
+  background-color: #99b3ff;
 }
 
 table.display tr.even.row_selected td {
-	background-color: #B0BED9;
+  background-color: #b0bed9;
 }
 
 table.display tr.odd.row_selected td {
-	background-color: #9FAFD1;
+  background-color: #9fafd1;
 }
-
 
 /*
  * Sorting classes for columns
  */
+
 /* For the standard odd/even */
-tr.odd td.sorting_1 {
 
-}
+tr.odd td.sorting_1 {}
 
-tr.odd td.sorting_2 {
+tr.odd td.sorting_2 {}
 
-}
+tr.odd td.sorting_3 {}
 
-tr.odd td.sorting_3 {
-
-}
-
-tr.even td.sorting_1 {
-
-}
+tr.even td.sorting_1 {}
 
 tr.even td.sorting_2 {
-	background-color: rgba(255,255,255,0.04);
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 tr.even td.sorting_3 {
-	background-color: rgba(255,255,255,0.04);
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
-
 /* For the Conditional-CSS grading rows */
+
 /*
- 	Colour calculations (based off the main row colours)
+   Colour calculations (based off the main row colours)
   Level 1:
-		dd > c4
-		ee > d5
-	Level 2:
-	  dd > d1
-	  ee > e2
+    dd > c4
+    ee > d5
+  Level 2:
+    dd > d1
+    ee > e2
  */
+
 tr.odd.gradeA td.sorting_1 {
-	background-color: #c4ffc4;
+  background-color: #c4ffc4;
 }
 
 tr.odd.gradeA td.sorting_2 {
-	background-color: #d1ffd1;
+  background-color: #d1ffd1;
 }
 
 tr.odd.gradeA td.sorting_3 {
-	background-color: #d1ffd1;
+  background-color: #d1ffd1;
 }
 
 tr.even.gradeA td.sorting_1 {
-	background-color: #d5ffd5;
+  background-color: #d5ffd5;
 }
 
 tr.even.gradeA td.sorting_2 {
-	background-color: #e2ffe2;
+  background-color: #e2ffe2;
 }
 
 tr.even.gradeA td.sorting_3 {
-	background-color: #e2ffe2;
+  background-color: #e2ffe2;
 }
 
 tr.odd.gradeC td.sorting_1 {
-	background-color: #c4c4ff;
+  background-color: #c4c4ff;
 }
 
 tr.odd.gradeC td.sorting_2 {
-	background-color: #d1d1ff;
+  background-color: #d1d1ff;
 }
 
 tr.odd.gradeC td.sorting_3 {
-	background-color: #d1d1ff;
+  background-color: #d1d1ff;
 }
 
 tr.even.gradeC td.sorting_1 {
-	background-color: #d5d5ff;
+  background-color: #d5d5ff;
 }
 
 tr.even.gradeC td.sorting_2 {
-	background-color: #e2e2ff;
+  background-color: #e2e2ff;
 }
 
 tr.even.gradeC td.sorting_3 {
-	background-color: #e2e2ff;
+  background-color: #e2e2ff;
 }
 
 tr.odd.gradeX td.sorting_1 {
-	background-color: #ffc4c4;
+  background-color: #ffc4c4;
 }
 
 tr.odd.gradeX td.sorting_2 {
-	background-color: #ffd1d1;
+  background-color: #ffd1d1;
 }
 
 tr.odd.gradeX td.sorting_3 {
-	background-color: #ffd1d1;
+  background-color: #ffd1d1;
 }
 
 tr.even.gradeX td.sorting_1 {
-	background-color: #ffd5d5;
+  background-color: #ffd5d5;
 }
 
 tr.even.gradeX td.sorting_2 {
-	background-color: #ffe2e2;
+  background-color: #ffe2e2;
 }
 
 tr.even.gradeX td.sorting_3 {
-	background-color: #ffe2e2;
+  background-color: #ffe2e2;
 }
 
 tr.odd.gradeU td.sorting_1 {
-	background-color: #c4c4c4;
+  background-color: #c4c4c4;
 }
 
 tr.odd.gradeU td.sorting_2 {
-	background-color: #d1d1d1;
+  background-color: #d1d1d1;
 }
 
 tr.odd.gradeU td.sorting_3 {
-	background-color: #d1d1d1;
+  background-color: #d1d1d1;
 }
 
 tr.even.gradeU td.sorting_1 {
-	background-color: #d5d5d5;
+  background-color: #d5d5d5;
 }
 
 tr.even.gradeU td.sorting_2 {
-	background-color: #e2e2e2;
+  background-color: #e2e2e2;
 }
 
 tr.even.gradeU td.sorting_3 {
-	background-color: #e2e2e2;
+  background-color: #e2e2e2;
 }
-
 
 /*
  * Row highlighting example
  */
-.ex_highlight #example tbody tr.even:hover, #example tbody tr.even td.highlighted {
-	background-color: #ECFFB3;
+
+.ex_highlight #example tbody tr.even:hover,
+#example tbody tr.even td.highlighted {
+  background-color: #ecffb3;
 }
 
-.ex_highlight #example tbody tr.odd:hover, #example tbody tr.odd td.highlighted {
-	background-color: #E6FF99;
+.ex_highlight #example tbody tr.odd:hover,
+#example tbody tr.odd td.highlighted {
+  background-color: #e6ff99;
 }
 
 .ex_highlight_row #example tr.even:hover {
-	background-color: #ECFFB3;
+  background-color: #ecffb3;
 }
 
 .ex_highlight_row #example tr.even:hover td.sorting_1 {
-	background-color: #DDFF75;
+  background-color: #ddff75;
 }
 
 .ex_highlight_row #example tr.even:hover td.sorting_2 {
-	background-color: #E7FF9E;
+  background-color: #e7ff9e;
 }
 
 .ex_highlight_row #example tr.even:hover td.sorting_3 {
-	background-color: #E2FF89;
+  background-color: #e2ff89;
 }
 
 .ex_highlight_row #example tr.odd:hover {
-	background-color: #E6FF99;
+  background-color: #e6ff99;
 }
 
 .ex_highlight_row #example tr.odd:hover td.sorting_1 {
-	background-color: #D6FF5C;
+  background-color: #d6ff5c;
 }
 
 .ex_highlight_row #example tr.odd:hover td.sorting_2 {
-	background-color: #E0FF84;
+  background-color: #e0ff84;
 }
 
 .ex_highlight_row #example tr.odd:hover td.sorting_3 {
-	background-color: #DBFF70;
+  background-color: #dbff70;
 }
-
 
 /*
  * KeyTable
  */
+
 table.KeyTable td {
-	border: 3px solid transparent;
+  border: 3px solid transparent;
 }
 
 table.KeyTable td.focus {
-	border: 3px solid #3366FF;
+  border: 3px solid #36f;
 }
 
 table.display tr.gradeA {
-	background-color: #eeffee;
+  background-color: #efe;
 }
 
 table.display tr.gradeC {
-	background-color: #ddddff;
+  background-color: #ddf;
 }
 
 table.display tr.gradeX {
-	background-color: #ffdddd;
+  background-color: #fdd;
 }
 
 table.display tr.gradeU {
-	background-color: #ddd;
+  background-color: #ddd;
 }
 
 div.box {
-	height: 100px;
-	padding: 10px;
-	overflow: auto;
-	border: 1px solid #8080FF;
-	background-color: #E5E5FF;
+  background-color: #e5e5ff;
+  border: 1px solid #8080ff;
+  height: 100px;
+  overflow: auto;
+  padding: 10px;
 }
